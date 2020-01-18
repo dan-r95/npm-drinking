@@ -108,7 +108,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                 return Card(
                                     child: ListTile(
                                   subtitle: Text(snap
-                                      .data[index].package.links.repository),
+                                      .data[index].package.links.repository != null ? snap
+                                      .data[index].package.links.repository : "" ),
                                   title: Text(snap.data[index].package.name),
                                   isThreeLine: true,
                                   leading: Text(
